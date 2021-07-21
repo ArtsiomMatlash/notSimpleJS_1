@@ -6,8 +6,8 @@ let str1arr = [];
 let str2arr = [];
 let counter = 0
 function anagram (str1, str2){
-   let strUp1 = str1.toLowerCase();
-   let strUp2 = str2.toLowerCase();
+   let strDn1 = str1.toLowerCase();
+   let strDn2 = str2.toLowerCase();
    for (let i = 0; i < str1.length; i++){
     str1arr.push(str1[i]);
   }
