@@ -5,7 +5,12 @@ function halfNumber (arr){
     for (let i = 0; i < arr.length; i++){
         sum = sum + arr[i];
     }
+    console.log(typeof(sum));
+    console.log(typeof(arr.length));
     let result = sum/arr.length;
+    console.log(typeof(result));
     console.log(result);
+    
 }
-halfNumber([10,20,30,40,50]);
+halfNumber([]);
+console.log(0/0);

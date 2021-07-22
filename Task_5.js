@@ -8,18 +8,27 @@ let counter = 0
 function anagram (str1, str2){
    let strDn1 = str1.toLowerCase();
    let strDn2 = str2.toLowerCase();
-   for (let i = 0; i < str1.length; i++){
-    str1arr.push(str1[i]);
+   for (let i = 0; i < strDn1.length; i++){
+    str1arr.push(strDn1[i]);
   }
-   for (let x = 0; x < str2.length; x++){
-    str2arr.unshift(str2[x]);
+   for (let x = 0; x < strDn2.length; x++){
+    str2arr.push(strDn2[x]);
   }
-  for (let i = str1.length - 1; i > 0; i--){
-    for (let x = 0; x < i; x++ ){
-      if (str1arr[x] > str1arr[x+1]){
-            let swapSymbols = str1arr[x];
-            str1arr[x] = str1arr[x+1];
-            str1arr[x+1] = swapSymbols;
+  for (let i = str1.length - 1; i > 0; i--) {
+    for (let x = 0; x < i; x++) {
+      if (str1arr[x] > str1arr[x + 1]) {
+        let swapSymbols = str1arr[x];
+        str1arr[x] = str1arr[x + 1];
+        str1arr[x + 1] = swapSymbols;
+       }
+    }
+  }
+  for (let i = str2.length - 1; i > 0; i--) {
+    for (let x = 0; x < i; x++) {
+      if (str2arr[x] > str2arr[x + 1]) {
+        let swapSymbols = str2arr[x];
+        str2arr[x] = str2arr[x + 1];
+        str2arr[x + 1] = swapSymbols;
        }
     }
   }
@@ -35,7 +44,7 @@ function anagram (str1, str2){
     console.log('Строки являются анаграммами');
     } 
 }
-anagram('nap','pna');
+anagram('Апельсин','Спаниель');
 
 /* Минус этого решения заключается в том, что функцию можно вызвать только один раз,т.к. при повторном вызове функции
 в массивах уже будут лежать данные из прошлого вызова и будут ложные срабатывания, но с текущим уровнем знаний других

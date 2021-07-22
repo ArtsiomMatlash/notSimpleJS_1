@@ -13,15 +13,12 @@ function palindrome (str) {
     }
     for(let y=0; y < arrNormal.length; y++){
         if(arrNormal[y] != arrReverse[y]){ 
-            counter ++;
+            console.log('False');
+            break;
         }
-    }   
-    if (counter>0){
-        console.log('False');
+        if( y === arrNormal.length-1){
+            console.log('True');
+        }
     }
-    else {
-        console.log('True');
-    } 
 }
 palindrome("1, 232 ,1");
-palindrome("1,2,3");

@@ -1,4 +1,4 @@
-/* Аналогично предыдущей */
+/* Тут всё просто. Пробовал через обьекты и ключи - не вышло =( */
 function season(month){
     if (month >=3 && month <=5){
         console.log("Весна");
@@ -9,7 +9,7 @@ function season(month){
     else if (month >8 && month <=11){
         console.log("Осень");
     }
-    else if ((month = 12) || (month >=1 && month<=2)){
+    else if (month === 12 || month === 1 || month === 2){
         console.log("Зима");
     }
     else {
@@ -22,3 +22,5 @@ season(6);
 season(9);
 season(12);
 season(1);
+season(2);
+season(13);
