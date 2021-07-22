@@ -5,12 +5,13 @@ function halfNumber (arr){
     for (let i = 0; i < arr.length; i++){
         sum = sum + arr[i];
     }
-    console.log(typeof(sum));
-    console.log(typeof(arr.length));
     let result = sum/arr.length;
-    console.log(typeof(result));
-    console.log(result);
+    if (!result){
+        console.log(0);
+    }
+    else {
+        console.log(result);
+    }
     
 }
 halfNumber([]);
-console.log(0/0);
