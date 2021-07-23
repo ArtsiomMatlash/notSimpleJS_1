@@ -2,6 +2,7 @@
 каждый символ строки, и если он равен главной (в нашем случае одному из значений ИЛИ), то counter увеличивается на один
 и тем сама считает гласные буквы в строке */
 function inputString (str){
+    let counter = 0;
     let strUp = str.toUpperCase();
     let lettersObj = {
         A: 0,
@@ -10,27 +11,13 @@ function inputString (str){
         E: 0,
         O: 0,
     }
-    for (let i = 0; i < str.length; i++){
-        if (strUp[i] === 'A'){
-            lettersObj.A++
-        }
-        else if (strUp[i] === 'E'){
-            lettersObj.E++
-        }
-        else if (strUp[i] === 'I'){
-            lettersObj.I++
-        }
-        else if (strUp[i] === 'U'){
-            lettersObj.U++
-        }
-        else if (strUp[i] === 'O'){
-            lettersObj.O++
-        }
-        else{
-            continue;
+    for(let key in lettersObj){
+        for (let i = 0; i < strUp.length; i++){
+            if (strUp[i] === key){
+                counter++
+            }
         }
     }
-    let sum = lettersObj.O + lettersObj.A + lettersObj.U + lettersObj.E + lettersObj.I;
-    console.log(`Число гласных в строке: ${sum}`);
+    console.log(`Число гласных в строке: ${counter}`);
 }
-inputString("Hello World");
+inputString('Hello Eugene');
